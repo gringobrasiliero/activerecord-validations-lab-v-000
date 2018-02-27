@@ -4,7 +4,6 @@ class Post < ActiveRecord::Base
   validates :title, presence:true
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
 
-  validates :non_clickbait,
 end
 
 class TitleValidator < ActiveModel::EachValidator
@@ -13,3 +12,4 @@ class TitleValidator < ActiveModel::EachValidator
       record.errors[attribute] << (options[:message] || "is not clickbaity title")
     end
   end
+end
