@@ -4,5 +4,3 @@ class Post < ActiveRecord::Base
   validates :title, presence:true
   validates :category, inclusion: {in: (Fiction Non-Fiction)}
 end
-
-validates :size, inclusion: { in: %w(small medium large)
