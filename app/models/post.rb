@@ -13,4 +13,4 @@ class TitleValidator < ActiveModel::EachValidator
       record.errors[attribute] << (options[:message] || "is not clickbaity title")
     end
   end
-end
+
