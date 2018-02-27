@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
   validates :title, presence:true
   validates :category, inclusion: {in: %w(Fiction Non-Fiction)}
 
-  validates :non_clickbait, 
+  validates :non_clickbait,
 end
 
 class TitleValidator < ActiveModel::EachValidator
